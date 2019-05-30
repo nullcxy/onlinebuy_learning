@@ -17,7 +17,8 @@
     </parent>
 
     <modules>
-        <module>onlinebuy-serverre-gistry</module>
+        <module>onlinebuy-server-registry</module>
+        <module>onlinebuy-config-server</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
