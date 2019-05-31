@@ -19,6 +19,7 @@
     <modules>
         <module>onlinebuy-server-registry</module>
         <module>onlinebuy-config-server</module>
+        <module>onlinebuy-user-service</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
