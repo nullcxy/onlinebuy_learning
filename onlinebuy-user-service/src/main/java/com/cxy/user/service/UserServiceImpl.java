@@ -2,6 +2,7 @@ package com.cxy.user.service;
 
 import com.cxy.common.constants.Constants;
 import com.cxy.common.exception.MamaBuyException;
+import com.cxy.user.dao.UserMapper;
 import com.cxy.user.entity.User;
 import com.cxy.user.entity.UserElement;
 import org.apache.curator.framework.CuratorFramework;
