@@ -8,8 +8,8 @@ spring:
       server:
         git:
           uri: https://gitee.com/toofull/mama-buy-config-repo.git
-          username: 254259353@qq.com
-          password: wang123
+          username: *****@qq.com
+          password: ****
           search-paths: gateway-config,user-service-config,trade-service-config,stock-service-config,common-config,key-generator-config,scheduler-config
     bus:
       trace:

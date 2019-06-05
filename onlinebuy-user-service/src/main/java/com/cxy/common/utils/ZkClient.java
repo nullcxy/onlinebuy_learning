@@ -6,12 +6,14 @@ import org.apache.curator.framework.CuratorFrameworkFactory;
 import org.apache.curator.retry.RetryNTimes;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
 
 /**
  * @Auther: cxy
  * @Date: 2019/6/3
- * @Description:
+ * @Description: 作为组件来使用，zk分布式锁
  */
+@Component
 public class ZkClient {
     @Autowired
     private Parameters parameters;
@@ -19,7 +21,6 @@ public class ZkClient {
 
     @Bean
     public CuratorFramework getZkClient(){
-
         CuratorFrameworkFactory.Builder builder= CuratorFrameworkFactory.builder()
                 .connectString(parameters.getZkHost())
                 .connectionTimeoutMs(3000)
@@ -27,6 +28,5 @@ public class ZkClient {
         CuratorFramework framework = builder.build();
         framework.start();
         return framework;
-
     }
 }

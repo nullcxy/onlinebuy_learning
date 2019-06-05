@@ -18,21 +18,17 @@ import org.springframework.session.web.http.HttpSessionStrategy;
 @EnableRedisHttpSession //(maxInactiveIntervalInSeconds = 604800)//session超时
 public class HttpSessionConfig {
 
-
     @Autowired
     private Parameters parameters;
 
     @Bean
     public HttpSessionStrategy httpSessionStrategy(){
-
         return  new HeaderHttpSessionStrategy();
-
     }
 
     @SuppressWarnings("Duplicates")
     @Bean
     public JedisConnectionFactory connectionFactory(){
-
         JedisConnectionFactory connectionFactory = new JedisConnectionFactory();
 
         String redisHost = parameters.getRedisNode().split(":")[0];
@@ -44,10 +40,6 @@ public class HttpSessionConfig {
         connectionFactory.setPassword(parameters.getRedisAuth());
 
         return connectionFactory;
-
     }
-
-
-
 }
 

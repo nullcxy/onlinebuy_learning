@@ -16,9 +16,9 @@ sharding:
     datasource:
       names: ds
       ds:
-        url: jdbc:mysql://localhost:3306/mama-buy-user
+        url: jdbc:mysql://localhost:3306/online_buy_user
         username: root
-        password: ****
+        password: root
 
 
 redis:

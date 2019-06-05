@@ -8,15 +8,15 @@ import com.cxy.common.constants.Constants;
  * @Description: 用于缓存的user信息体
  */
 
-public class MamaBuyException extends RuntimeException{
+public class OnlineBuyException extends RuntimeException{
 
     private int statusCode = Constants.RESP_STATUS_INTERNAL_ERROR;
 
-    public MamaBuyException(int statusCode,String message) {
+    public OnlineBuyException(int statusCode,String message) {
         super(message);
         this.statusCode = statusCode;
     }
-    public MamaBuyException(String message) {
+    public OnlineBuyException(String message) {
         super(message);
     }
 

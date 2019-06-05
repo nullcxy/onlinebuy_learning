@@ -8,17 +8,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="onlinebuy-config-server" />
         <module name="onlinebuy-server-registry" />
-        <module name="onlinebuy-serverre-gistry" />
+        <module name="onlinebuy-user-service" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="onlinebuy-service-registry" target="1.5" />
-      <module name="onlinebuyserviceregistry" target="1.5" />
-    </bytecodeTargetLevel>
-  </component>
-  <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="onlinebuy-config-server" options="" />
-    </option>
   </component>
 </project>

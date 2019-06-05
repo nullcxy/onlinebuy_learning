@@ -27,35 +27,26 @@ public class UserController {
     @Qualifier("userService")
     private UserService userService;
 
-
     /**
-     *
-     * @Description  用户注册
-     * @Author JackWang<coder520.com>
-     * @Date 2018/1/15 21:28
-     * @Param [user]
-     * @Return void
+     * 用户注册
+     * @param user
+     * @return
+     * @throws Exception
      */
     @RequestMapping("/register")
     public ApiResult register (@RequestBody @Valid User user) throws Exception {
-
         userService.registerUser(user);
-
         return new ApiResult(Constants.RESP_STATUS_OK,"注册成功");
-
     }
 
     /**
-     *
-     * @Description   用户登录
-     * @Author JackWang<coder520.com>
-     * @Date 2018/3/11 16:41
-     * @Param [session, user]
-     * @Return com.coder520.common.resp.ApiResult
+     * 用户登录
+     * @param session
+     * @param user
+     * @return
      */
     @RequestMapping("/login")
     public ApiResult login(HttpSession session, @RequestBody @Valid User user){
-
         ApiResult<UserElement> result = new ApiResult<>(Constants.RESP_STATUS_OK,"登录成功");
 
         UserElement ue= userService.login(user);
@@ -65,9 +56,7 @@ public class UserController {
             }
             result.setData(ue);
         }
-
         return result;
-
     }
 
     /**
@@ -91,7 +80,5 @@ public class UserController {
 
         return result;
     }
-
-
 }
 

@@ -1,5 +1,6 @@
 package com.cxy.message.dao;
 
+import com.cxy.message.entity.MessageEventProcess;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

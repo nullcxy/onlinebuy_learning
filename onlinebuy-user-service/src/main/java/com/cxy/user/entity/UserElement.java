@@ -7,7 +7,7 @@ import java.io.Serializable;
 /**
  * @Auther: cxy
  * @Date: 2019/6/3
- * @Description:
+ * @Description: 用于缓存的user消息体
  */
 @Data
 public class UserElement implements Serializable {

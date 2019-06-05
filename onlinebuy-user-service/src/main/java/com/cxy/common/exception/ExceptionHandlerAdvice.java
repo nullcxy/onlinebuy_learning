@@ -1,6 +1,7 @@
 package com.cxy.common.exception;
 
 import com.cxy.common.constants.Constants;
+import com.cxy.common.resp.ApiResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -22,8 +23,8 @@ public class ExceptionHandlerAdvice {
     public ApiResult handleException(Exception e){
         return new ApiResult(Constants.RESP_STATUS_INTERNAL_ERROR,"系统异常，请稍后再试");
     }
-    @ExceptionHandler(com.cxy.common.exception.MamaBuyException.class)
-    public ApiResult handleException(MamaBuyException e){
+    @ExceptionHandler(com.cxy.common.exception.OnlineBuyException.class)
+    public ApiResult handleException(OnlineBuyException e){
         return new ApiResult(e.getStatusCode(),e.getMessage());
     }
 
