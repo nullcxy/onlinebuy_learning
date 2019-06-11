@@ -59,14 +59,6 @@ public class UserController {
         return result;
     }
 
-    /**
-     *
-     * @Description   获取用户信息
-     * @Author JackWang<coder520.com>
-     * @Date 2018/3/11 16:42
-     * @Param [session]
-     * @Return
-     */
     @RequestMapping("/info")
     public ApiResult<UserElement> getUserInfo(HttpSession session)
     {

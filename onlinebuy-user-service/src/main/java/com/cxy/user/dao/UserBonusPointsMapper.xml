@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.coder520.user.dao.UserBonusPointsMapper" >
-    <resultMap id="BaseResultMap" type="com.coder520.user.entity.UserBonusPoints" >
+<mapper namespace="com.cxy.user.dao.UserBonusPointsMapper" >
+    <resultMap id="BaseResultMap" type="com.cxy.user.entity.UserBonusPoints" >
         <id column="id" property="id" jdbcType="INTEGER" />
         <result column="user_uuid" property="userUuid" jdbcType="BIGINT" />
         <result column="points" property="points" jdbcType="INTEGER" />
@@ -19,13 +19,13 @@
     delete from user_bonus_points
     where id = #{id,jdbcType=INTEGER}
   </delete>
-    <insert id="insert" parameterType="com.coder520.user.entity.UserBonusPoints" >
+    <insert id="insert" parameterType="com.cxy.user.entity.UserBonusPoints" >
     insert into user_bonus_points (id, user_uuid, points
       )
     values (#{id,jdbcType=INTEGER}, #{userUuid,jdbcType=BIGINT}, #{points,jdbcType=INTEGER}
       )
   </insert>
-    <insert id="insertSelective" parameterType="com.coder520.user.entity.UserBonusPoints" >
+    <insert id="insertSelective" parameterType="com.cxy.user.entity.UserBonusPoints" >
         insert into user_bonus_points
         <trim prefix="(" suffix=")" suffixOverrides="," >
             <if test="id != null" >
@@ -50,7 +50,7 @@
             </if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.coder520.user.entity.UserBonusPoints" >
+    <update id="updateByPrimaryKeySelective" parameterType="com.cxy.user.entity.UserBonusPoints" >
         update user_bonus_points
         <set >
             <if test="userUuid != null" >
@@ -62,7 +62,7 @@
         </set>
         where id = #{id,jdbcType=INTEGER}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.coder520.user.entity.UserBonusPoints" >
+    <update id="updateByPrimaryKey" parameterType="com.cxy.user.entity.UserBonusPoints" >
     update user_bonus_points
     set user_uuid = #{userUuid,jdbcType=BIGINT},
       points = #{points,jdbcType=INTEGER}

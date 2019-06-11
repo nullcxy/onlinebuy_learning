@@ -50,7 +50,7 @@
     </appender>
 
 
-    <logger name="com.coder520" level="debug" >
+    <logger name="com.cxy" level="debug" >
         <appender-ref ref="normalLog" />
         <appender-ref ref="errorLog" />
     </logger>

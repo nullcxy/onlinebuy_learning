@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.coder520.message.dao.MessageEventProcessMapper" >
-    <resultMap id="BaseResultMap" type="com.coder520.message.entity.MessageEventProcess" >
+<mapper namespace="com.cxy.message.dao.MessageEventProcessMapper" >
+    <resultMap id="BaseResultMap" type="com.cxy.message.entity.MessageEventProcess" >
         <id column="id" property="id" jdbcType="BIGINT" />
         <result column="status" property="status" jdbcType="TINYINT" />
         <result column="payload" property="payload" jdbcType="VARCHAR" />
@@ -21,13 +21,13 @@
     delete from message_event_process
     where id = #{id,jdbcType=BIGINT}
   </delete>
-    <insert id="insert" parameterType="com.coder520.message.entity.MessageEventProcess" >
+    <insert id="insert" parameterType="com.cxy.message.entity.MessageEventProcess" >
     insert into message_event_process (id, status, payload,
       create_time, type)
     values (#{id,jdbcType=BIGINT}, #{status,jdbcType=TINYINT}, #{payload,jdbcType=VARCHAR},
       #{createTime,jdbcType=TIMESTAMP}, #{type,jdbcType=TINYINT})
   </insert>
-    <insert id="insertSelective" parameterType="com.coder520.message.entity.MessageEventProcess" >
+    <insert id="insertSelective" parameterType="com.cxy.message.entity.MessageEventProcess" >
         insert into message_event_process
         <trim prefix="(" suffix=")" suffixOverrides="," >
             <if test="id != null" >
@@ -64,7 +64,7 @@
             </if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.coder520.message.entity.MessageEventProcess" >
+    <update id="updateByPrimaryKeySelective" parameterType="com.cxy.message.entity.MessageEventProcess" >
         update message_event_process
         <set >
             <if test="status != null" >
@@ -82,7 +82,7 @@
         </set>
         where id = #{id,jdbcType=BIGINT}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.coder520.message.entity.MessageEventProcess" >
+    <update id="updateByPrimaryKey" parameterType="com.cxy.message.entity.MessageEventProcess" >
     update message_event_process
     set status = #{status,jdbcType=TINYINT},
       payload = #{payload,jdbcType=VARCHAR},
